@@ -2,6 +2,11 @@ import { Body, Controller, Get, Post, Query, Response } from '@nestjs/common';
 
 @Controller()
 export class ViewController {
+  @Get('/')
+  hello() {
+    return 'Hello';
+  }
+
   @Get('/transaction/failed')
   transctionFailedPage() {
     return '交易失敗';

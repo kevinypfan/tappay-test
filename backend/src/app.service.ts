@@ -73,8 +73,10 @@ export class AppService {
       cardholder: dto.cardholder,
       three_domain_secure: !!dto.threeDomainSecure, // 3D 驗證
       result_url: {
-        backend_notify_url: process.env.PAYMENT_URL + '/notify/callback',
-        frontend_redirect_url: process.env.PAYMENT_URL + '/frontend/callback',
+        backend_notify_url:
+          process.env.PAYMENT_URL + '/v1.0/api/notify/callback',
+        frontend_redirect_url:
+          process.env.PAYMENT_URL + '/v1.0/api/frontend/callback',
         go_back_url: process.env.PAYMENT_URL + '/',
       },
       remember: false,
